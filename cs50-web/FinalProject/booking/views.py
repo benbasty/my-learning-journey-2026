@@ -65,7 +65,7 @@ def register(request):
         return render(request, "booking/register.html")
 
 def class_detail(request, class_id):
-    """Show detailed info about a specific class"""
+    # Show detailed info about a specific class
     scheduled_class = get_object_or_404(ScheduledClass, id=class_id)
 
     # Check if current user has already booked this class
@@ -85,7 +85,7 @@ def class_detail(request, class_id):
 
 @login_required
 def book_class(request, class_id):
-    """Book a class (AJAX)"""
+    #Book a class
     if request.method != "POST":
         return JsonResponse({"error": "POST request required"}, status=400)
 
@@ -97,7 +97,7 @@ def book_class(request, class_id):
 
     # Check if already booked
     existing_booking = Booking.objects.filter(
-        student=request.user, 
+        student=request.user,
         scheduled_class=scheduled_class,
         status='confirmed'
     ).exists()
@@ -173,7 +173,7 @@ def dashboard(request):
 
 @login_required
 def create_class(request):
-    """Instructor creates a new class"""
+    #Instructor creates a new class
     if not request.user.is_instructor:
         return HttpResponseRedirect(reverse("index"))
 
@@ -205,7 +205,7 @@ def create_class(request):
 
 @login_required
 def edit_class(request, class_id):
-    """Instructor edits their own class"""
+    #Instructor edits their own class
     scheduled_class = get_object_or_404(ScheduledClass, id=class_id)
 
     # Only the instructor who created it can edit
