@@ -1,0 +1,32 @@
+{% extends "booking/layout.html" %}
+
+{% block title %}Instructor Dashboard{% endblock %}
+
+{% block body %}
+    <h1>Welcome, {{ user.username }}!</h1>
+    <p class="lead">You are logged in as an instructor.</p>
+
+    <a href="{% url 'create_class' %}" class="btn btn-success mb-4">+ Create New Class</a>
+
+    <h2>Your Classes</h2>
+    {% if my_classes %}
+        <div class="row">
+            {% for class in my_classes %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ class.class_type.name }}</h5>
+                            <p><i class="fas fa-calendar"></i> {{ class.start_time|date:"M d, Y H:i" }}</p>
+                            <p><i class="fas fa-users"></i> Booked: {{ class.booking_set.count }}/{{ class.capacity }}</p>
+                            <p><i class="fas fa-map-marker-alt"></i> {{ class.location }}</p>
+                            <a href="{% url 'edit_class' class.id %}" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="{% url 'delete_class' class.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Delete this class?')">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>You haven't created any classes yet.</p>
+    {% endif %}
+{% endblock %}

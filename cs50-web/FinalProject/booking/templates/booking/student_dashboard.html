@@ -1,0 +1,47 @@
+{% extends "booking/layout.html" %}
+
+{% block title %}My Dashboard{% endblock %}
+
+{% block body %}
+    <h1>Welcome, {{ user.username }}!</h1>
+
+    <h2 class="mt-4">Upcoming Classes</h2>
+    {% if upcoming_bookings %}
+        <div class="row">
+            {% for booking in upcoming_bookings %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ booking.scheduled_class.class_type.name }}</h5>
+                            <p><i class="fas fa-user"></i> {{ booking.scheduled_class.instructor.username }}</p>
+                            <p><i class="fas fa-calendar"></i> {{ booking.scheduled_class.start_time|date:"M d, Y H:i" }}</p>
+                            <p><i class="fas fa-map-marker-alt"></i> {{ booking.scheduled_class.location }}</p>
+                            <a href="{% url 'class_detail' booking.scheduled_class.id %}" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No upcoming classes. <a href="{% url 'index' %}">Browse classes</a></p>
+    {% endif %}
+
+    <h2 class="mt-4">Past Classes</h2>
+    {% if past_bookings %}
+        <div class="row">
+            {% for booking in past_bookings %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ booking.scheduled_class.class_type.name }}</h5>
+                            <p><i class="fas fa-calendar"></i> {{ booking.scheduled_class.start_time|date:"M d, Y H:i" }}</p>
+                            <p><i class="fas fa-check-circle text-success"></i> Attended: {{ booking.attended|yesno:"Yes,No" }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No past classes yet.</p>
+    {% endif %}
+{% endblock %}

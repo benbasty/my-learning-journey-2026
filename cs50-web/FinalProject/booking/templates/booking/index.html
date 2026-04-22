@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hi
-</body>
-</html>
+{% extends "booking/layout.html" %}
+
+{% block title %}All Classes{% endblock %}
+
+{% block body %}
+    <h1 class="mb-4">Upcoming Classes</h1>
+
+    <div class="row">
+        {% for class in classes %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ class.class_type.name }}</h5>
+                        <p class="card-text text-muted">{{ class.class_type.description|truncatewords:15 }}</p>
+                        <p><i class="fas fa-user"></i> {{ class.instructor.username }}</p>
+                        <p><i class="fas fa-calendar"></i> {{ class.start_time|date:"M d, Y H:i" }}</p>
+                        <p><i class="fas fa-map-marker-alt"></i> {{ class.location }}</p>
+                        <p><i class="fas fa-users"></i> {{ class.remaining_spots }} spots left</p>
+                        <a href="{% url 'class_detail' class.id %}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No upcoming classes available.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
