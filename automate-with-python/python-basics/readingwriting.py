@@ -41,11 +41,21 @@ print(time.asctime(time.localtime(file.stat().st_mtime)))
 # you want to open. This can be either an absolute path or a relative path. 
 # The open() function returns a File object.
 
-hello_file = open(Path.cwd() / 'hello.txt', encoding='UTF-8')
-print(hello_file)
-print(hello_file.read())
+# hello_file = open(Path.cwd() / 'hello.txt', encoding='UTF-8')
+# print(hello_file)
+# print(hello_file.read())
 
 # Writing to Files
 # check up
 
 # Using with Statements
+# Every file on which your program calls open() needs close() called on it as well
+# A with statement makes it easier to automatically close files
+# A with statement creates something called
+# a context manager that Python uses to manage resources.
+
+with open(Path.cwd() / 'hello.txt', 'w', encoding='UTF-8') as hello_file:
+    hello_file.write("Yeah We are Back saying hello")
+with open(Path.cwd() / 'hello.txt', encoding='UTF-8') as hello_file:
+    content = print(hello_file.read())
+
