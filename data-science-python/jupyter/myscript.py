@@ -10,3 +10,15 @@ for num in range(1,4):
 # Plain is more compact and gives less information
 # Verbose mode adds some extra information,
 # including the arguments to any functions that are called
+
+
+# Profiling and Timing Code
+# %time: time of execution of a single statement
+# %timeit: Time repeated execution of a single statement for more accuracy
+# %prun: run code with profiler
+# %1prun: run code with the line by line profiler
+# %memit: measure the memory use of a single statement
+# %mprun: Run code with the line-by-line memory profiler
+
+# %timeit does some clever things under the hood to 
+# prevent system calls from interfering with the timing. 
