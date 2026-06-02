@@ -11,3 +11,9 @@ A = array.array('i', L)
 # creating arrays from python lists
 L2 = list(range(5))
 A2 = np.array(L2)
+
+# unlike Python lists, NumPy arrays can only contain data of the same type.
+A3 = np.array([2.34, 1, 2, 3])
+
+# unlike Python lists, which are always one-dimensional sequences, NumPy arrays can be multidimensional.
+A4 = np.array([range(i, i+3) for i in [2, 4, 6]])
