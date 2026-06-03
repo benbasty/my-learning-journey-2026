@@ -31,10 +31,31 @@ x2[0, 0] = 10 #we can also modify array's index value
 # the value will be silently truncated:  x1[0] = 3.14159 => x1[0] = 3
 
 
-
-
-
-
 # slicing of arrays: getting and setting smaller subarrays within a larger array
+# The NumPy slicing syntax follows that of the standard Python list x[start:stop:step]
+# if value is unspecified, they default to the values start=0, stop=<size of dimension>, step=1.
+x4 = [3, 4, 5, 6, 7, 8, 9]
+ax4 = print('x4 first three elements', x4[:3])
+bx4 = print('x4 elements after index 3', x4[3:])
+cx4 = print(x4[1:4]) # middle subarray
+dx4 = print(x4[::2]) # every second element
+ex4 = print(x4[1::2]) # every second element, starting at index 1
+# when the step value is negative, the defaults for start and stop are swapped.
+fx4 = print(x4[::-1]) # all elements, reversed
+ex4 = print(x4[4::-2]) # every second element from index 4, reversed
+# Multidimensional Subarrays slicing
+
+
+
+
+
+
+
+
+
+
+
+
+
 # reshaping of arrays: changing the shape of a given array
 # joining and splitting arrays: combining multiple arrays into one, and splitting one array into many
