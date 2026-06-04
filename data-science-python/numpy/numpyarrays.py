@@ -63,7 +63,7 @@ hx2 = x2[0] # equivalent to x2[0, :]
 # reshaping of arrays: changing the shape of a given array
 # reshaping arrays can be done with the reshape method.
 # put the numbers 1 through 9 in a grid
-grid = np.arrange(1, 10).reshape(3, 3)
+grid = np.arange(1, 10).reshape(3, 3)
 # the size of the initial array must match the size of the reshaped array
 # the reshape method will return a no-copy view of the initial array.
 # converting a one-dimensional array into a two-dimensional row
@@ -113,7 +113,7 @@ sp1, sp2, sp3 = np.split(sp, (3, 5))
 # N split points leads to N + 1 subarrays.
 # The related functions np.hsplit and np.vsplit are similar
 
-grid3 = np.arrange(16).reshape((4,4))
+grid3 = np.arange(16).reshape((4,4))
 upper, lower = np.vsplit(grid3, [2])
 left, right = np.hsplit(grid3, [2])
 # Similarly, for higher-dimensional arrays, np.dsplit will split arrays along the third axis.
