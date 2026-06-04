@@ -77,19 +77,43 @@ cnx = x[:, np.newaxis] # column vector via newaxis
 # to inject the missing dimension on the fly
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # joining and splitting arrays: combining multiple arrays into one, and splitting one array into many
+# concatenation or joining two arrays together is done with np.concatenate, np.vstack, and np.hstack. np.concatenate
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+c = np.concatenate([a, b])
+# you can as well concatenate more than 2 arrays
+# and also can be used for 2-dimentional array
+grid2 = np.array([[1,2,3],
+                  [4,5,6]])
+# concatenate along the first axis
+allgrids2 = np.concatenate([grid2, grid2])
+
+# concatenate along the second axis (zero-indexed)
+allgrid3 = np.concatenate([grid2, grid2], axis=1)
+
+# For working with arrays of mixed dimensions, it can be clearer to use
+# the np.vstack (vertical stack) and np.hstack (horizontal stack) functions
+#vertically stacking the array
+vg = np.vstack([x, grid2])
+
+#horizontally stacking the array
+y = np.array([[99],
+              [99]])
+hg = np.hstack([grid2, y])
+# for higher-dimensional arrays, np.dstack will stack arrays along the third axis.
+
+# splitting arrays
+# The opposite of concatenation is splitting, implemented by the functions
+# np.split, np.hsplit, and np.vsplit.
+
+sp = [1, 2, 3, 99, 99, 3, 2, 1]
+sp1, sp2, sp3 = np.split(sp, (3, 5))
+# N split points leads to N + 1 subarrays.
+# The related functions np.hsplit and np.vsplit are similar
+
+grid3 = np.arrange(16).reshape((4,4))
+upper, lower = np.vsplit(grid3, [2])
+left, right = np.hsplit(grid3, [2])
+# Similarly, for higher-dimensional arrays, np.dsplit will split arrays along the third axis.
