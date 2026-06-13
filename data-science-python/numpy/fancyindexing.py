@@ -38,3 +38,11 @@ mask = np.array([True, False, True, False])
 row = np.array([0, 1, 2]) 
 col = np.array([2, 1, 3])
 W = X[row[:, np.newaxis], mask]
+
+#modifying values with fancy indexing
+
+# we have the array aa
+aa = np.arange(10)
+ai = np.array([2, 1, 8, 4])
+aa[ai] = 99
+
