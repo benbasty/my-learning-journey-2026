@@ -17,3 +17,59 @@
 # So, if we wish, we can use strings as an index:
 
 # you can think of a Pandas Series a bit like a specialization of a Python dictionary
+
+# Series objects
+
+# we can construct a series using an entity as a list or NumPy array
+
+import numpy as np
+import pandas as pd
+
+data = pd.Series([0.25, 0.5, 0.75, 1.0])
+dvalues = data.values
+dindex = data.index
+d1 = data[1]
+d13 = data[1:3]
+data2 = pd.Series([0.25, 0.5, 0.75, 1.0], index=['a', 'b', 'c', 'd'])
+db2 = data2['b']
+data3 = pd.Series([0.25, 0.5, 0.75, 1.0], index=[2, 5, 3, 7])
+d35 = data3[5]
+
+population_dict = {'California': 39538223, 'Texas':29145505, 'Florida': 21538187, 'New York': 20201249, 'Pennsylvania': 13002700}
+population = pd.Series(population_dict)
+pc = population['California']
+pcf = population['California':'Florida']
+
+newArLi = pd.Series([2, 4, 6])
+newArLi2 = pd.Series(5, index=[100, 200, 300])
+newDict = pd.Series({2:'a', 1:'b', 3:'c'})
+
+
+# the index can be explicitly set to control the order or the subset of keys used
+
+newDict2 = pd.Series({2:'a', 1:'b', 3:'c'}, index=[1, 2])
+#since we only mentionned 2 index, we only get 2 elements and their equivalent values.
+
+# DATAFRAME OBJECT
+# Like the Series object discussed in the previous section,
+# the DataFrame can be thought of either as a generalization of a NumPy array, 
+# or as a specialization of a Python dictionary.
+
+# If a Series is an analog of a one-dimensional array with explicit indices, 
+# a DataFrame is an analog of a two-dimensional array with explicit row and column indices.
+
+area_dict = {'California': 423967, 'Texas': 695662, 'Florida': 170312,
+                'New York': 141297, 'Pennsylvania': 119280}
+
+area = pd.Series(area_dict)
+states = pd.DataFrame({'population': population, 'area': area})
+
+statesid = states.index
+states['area']
+
+# Constructing DataFrame Objects from a single Series object
+ap = pd.DataFrame(population, columns='population')
+
+# Constructing DataFrame Objects from a list of dicts
+data4 = [{'a': i, 'b': 2 * i} for i in range(3)]
+dd4 = pd.DataFrame(data)
