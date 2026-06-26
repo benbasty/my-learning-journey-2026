@@ -47,3 +47,26 @@ dil13 = data3.iloc[1:3] #returns the values at index 1 and 2 (not 3)
 
 
 # Data Selection in DataFrames
+
+# DataFrame as Dictionary
+
+area = pd.Series({'California': 423967, 'Texas': 695662,
+                  'Florida': 170312, 'New York': 141297,
+                  'Pennsylvania': 119280})
+pop = pd.Series({'California': 39538223, 'Texas': 29145505,
+                 'Florida': 21538187, 'New York': 20201249,
+                 'Pennsylvania': 13002700})
+data4 = pd.DataFrame({'area':area, 'pop': pop})
+
+# The individual Series that make up the columns of the DataFrame 
+# can be accessed via dictionary-style indexing of the column name:
+# data['area']
+# we can also use attribute-style access with column names that are strings
+# data.area
+
+# DataFrame as Two-Dimensional Array
+vl = data4.values
+
+# Transposing the full DataFrame to swap rows and columns
+
+trsp = data4.T
