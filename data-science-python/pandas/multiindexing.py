@@ -88,3 +88,6 @@ pop2.unstack.stack()
 
     # Index Setting and Resetting
 pop_flat = pop2.reset_index(name='population')
+# we can build a multiindex from the column values
+# by using set_index method which returns a multiply indexed DataFrame
+pfsi = pop_flat.set_index(['state','year'])
