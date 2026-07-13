@@ -45,7 +45,7 @@ Here's a professional README.md you can use to track your progress through the *
 | Ch 15 | Introducing Pandas Objects | ✅ Completed | |
 | Ch 16 | Data Indexing and Selection | ✅ Completed | |
 | **Ch 17** | **Hierarchical Indexing** | ✅ Completed | |
-| **Ch 18** | **Combining Datasets: Concat and Append** | ⬜ **To Do** | |
+| **Ch 18** | **Combining Datasets: Concat and Append** | ✅ Completed | |
 | **Ch 19** | **Combining Datasets: Merge and Join** | ⬜ **To Do** | |
 | **Ch 20** | **Aggregation and Grouping** | ⬜ **To Do** | |
 | Ch 21 | Pivot Tables | ⬜ **Priority** | |
@@ -102,7 +102,7 @@ Here's a professional README.md you can use to track your progress through the *
 | Part III: Pandas | 10 | 3 | 7 |
 | Part IV: Visualization | 12 | 0 | 12 |
 | Part V: Machine Learning | 14 | 0 | 14 |
-| **Total** | **50** | **16** | **34** |
+| **Total** | **50** | **18** | **32** |
 
 ---
 
@@ -144,8 +144,8 @@ Remaining: 16
 
 ---
 
-**Last Updated**: [July 11 2026]
-**Status**: In Progress — 52% Complete
+**Last Updated**: [July 14 2026]
+**Status**: In Progress — 54% Complete
 
 ---
 
