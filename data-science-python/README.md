@@ -46,7 +46,7 @@ Here's a professional README.md you can use to track your progress through the *
 | Ch 16 | Data Indexing and Selection | ✅ Completed | |
 | **Ch 17** | **Hierarchical Indexing** | ✅ Completed | |
 | **Ch 18** | **Combining Datasets: Concat and Append** | ✅ Completed | |
-| **Ch 19** | **Combining Datasets: Merge and Join** | ⬜ **To Do** | |
+| **Ch 19** | **Combining Datasets: Merge and Join** | ✅ Completed | |
 | **Ch 20** | **Aggregation and Grouping** | ⬜ **To Do** | |
 | Ch 21 | Pivot Tables | ⬜ **Priority** | |
 | Ch 22 | Vectorized String Operations | ⬜ **On Demand** | |
@@ -99,10 +99,10 @@ Here's a professional README.md you can use to track your progress through the *
 |---------|---------------|-----------|-----------|
 | Part I: IPython | 5 | 5 | 0 |
 | Part II: NumPy | 9 | 9 | 0 |
-| Part III: Pandas | 10 | 3 | 7 |
-| Part IV: Visualization | 12 | 0 | 12 |
-| Part V: Machine Learning | 14 | 0 | 14 |
-| **Total** | **50** | **18** | **32** |
+| Part III: Pandas | 6 | 5 | 1 |
+| Part IV: Visualization | 10 | 0 | 10 |
+<!-- | Part V: Machine Learning | 14 | 0 | 14 | -->
+| **Total** | **30** | **19** | **11** |
 
 ---
 
@@ -131,8 +131,8 @@ Here's a professional README.md you can use to track your progress through the *
 ---
 Chapters: Pt I: IPython Ch 1-5, Pt II: NumPy Ch 6-14, Pt III: Pandas (Core) Ch 15-21, Pt IV: Visualization Ch 25-36
 All Active Chapters for Completion: 33
-Completed Chapters: 17
-Remaining: 16
+Completed Chapters: 19
+Remaining: 11
 ---
 
 ## 🚀 Next Steps
@@ -145,7 +145,7 @@ Remaining: 16
 ---
 
 **Last Updated**: [July 14 2026]
-**Status**: In Progress — 54% Complete
+**Status**: In Progress — 63% Complete
 
 ---
 
