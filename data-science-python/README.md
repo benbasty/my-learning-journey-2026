@@ -47,7 +47,7 @@ Here's a professional README.md you can use to track your progress through the *
 | **Ch 17** | **Hierarchical Indexing** | ✅ Completed | |
 | **Ch 18** | **Combining Datasets: Concat and Append** | ✅ Completed | |
 | **Ch 19** | **Combining Datasets: Merge and Join** | ✅ Completed | |
-| **Ch 20** | **Aggregation and Grouping** | ⬜ **To Do** | |
+| **Ch 20** | **Aggregation and Grouping** | ✅ Completed | |
 | Ch 21 | Pivot Tables | ⬜ **Priority** | |
 | Ch 22 | Vectorized String Operations | ⬜ **On Demand** | |
 | Ch 23 | Working with Time Series | ⬜ **On Demand** | |
@@ -99,10 +99,10 @@ Here's a professional README.md you can use to track your progress through the *
 |---------|---------------|-----------|-----------|
 | Part I: IPython | 5 | 5 | 0 |
 | Part II: NumPy | 9 | 9 | 0 |
-| Part III: Pandas | 6 | 5 | 1 |
+| Part III: Pandas | 6 | 6 | 0 |
 | Part IV: Visualization | 10 | 0 | 10 |
 <!-- | Part V: Machine Learning | 14 | 0 | 14 | -->
-| **Total** | **30** | **19** | **11** |
+| **Total** | **30** | **20** | **10** |
 
 ---
 
@@ -145,7 +145,7 @@ Remaining: 11
 ---
 
 **Last Updated**: [July 14 2026]
-**Status**: In Progress — 63% Complete
+**Status**: In Progress — 66% Complete
 
 ---
 
