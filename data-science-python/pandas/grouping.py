@@ -81,12 +81,19 @@ dfgbs = df1.groupby('key').sum()
                 # return x
                 # df.groupby('key').apply(norm_by_data2)
 
-# Specifying the Split Key
+# Specifying the Split Key =>
     # A list, array, series, or index providing the grouping keys
+L = [0, 1, 0, 1, 2, 0]
+dfgbs1 = df1.groupby(L).sum()
+dfgbks1 = df1.groupby(['key']).sum()
     # A dictionary or series mapping index to group
+df2 = df1.set_index('key')
+mapping = {'A': 'vowel', 'B': 'consonant','C':'consonant'}
+ddfgbms2 = display('df2', 'df2.groupby(mapping).sum()')
     # Any Python function
+dfgbslm2 = df2.groupby(str.lower).mean()
     # A list of valid keys
-
+df2.groupby([str.lower, mapping]).mean()
 
 # Grouping Example
 
