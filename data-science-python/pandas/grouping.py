@@ -50,10 +50,47 @@ dfgbs = df1.groupby('key').sum()
         # planets.groupby('method')['year'].describe().unstack()
 
 # Aggregate, Filter, Transform, Apply
-# GroupBy objects have aggregate, filter, transform, and apply methods 
+# GroupBy objects have aggregate, filter, transform, and apply methods
 # that efficiently implement a variety of useful operations before combining the grouped data.
 
-    # Aggregation: 
+    # Aggregation: df.groupby('key').aggregate(['min', np.median, max])
+    # this method is more powerful, the aggregate method allows for even more flexibility. 
+    # It can take a string, a function, or a list thereof, and compute all the aggregates at once. 
+    # we can also pass a dictionary mapping column names to operations to be applied on that column
+    # df.groupby('key').aggregate({'data1': 'min', 'data2': 'max'})
+
+    # Filtering
+        # A filtering operation allows you to drop data based on the group properties.
+        # def filter_func(x):
+            #return x['data2].std() > 4
+        # display('df', "df.groupby('key').std()","df.groupby('key').filter(filter_func)")
+
+    # Transformation
+        # While aggregation must return a reduced version of the data, 
+        # transformation can return some transformed version of the full data to recombine.
+        # def center(x):
+            # return x - x.mean()
+        # df.groupby('key').transform(center)
+
+    # apply method
+        # The apply method lets you apply an arbitrary function to the group results.
+        # The function should take a DataFrame and returns either a Pandas object (e.g., DataFrame, Series) or a scalar
+        # def norm_by_data2(x):
+            # x is a DataFrame of group values
+                # x['data1'] /= x['data2'].sum()
+                # return x
+                # df.groupby('key').apply(norm_by_data2)
+
+# Specifying the Split Key
+    # A list, array, series, or index providing the grouping keys
+    # A dictionary or series mapping index to group
+    # Any Python function
+    # A list of valid keys
+
+
+# Grouping Example
+
+
 
 
 
