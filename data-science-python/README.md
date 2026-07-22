@@ -58,7 +58,7 @@ Here's a professional README.md you can use to track your progress through the *
 ### Part IV: Visualization with Matplotlib
 | Chapter | Topic | Status |
 |---------|-------|--------|
-| Ch 25 | General Tips for Matplotlib | ⬜ **Priority** |
+| Ch 25 | General Tips for Matplotlib | ✅ Completed | |
 | Ch 26 | Simple Line Plots | ⬜ **Priority** |
 | Ch 27 | Simple Scatter Plots | ⬜ **Priority** |
 | Ch 28 | Density and Contour Plots | ⬜ **Priority** |
@@ -100,9 +100,9 @@ Here's a professional README.md you can use to track your progress through the *
 | Part I: IPython | 5 | 5 | 0 |
 | Part II: NumPy | 9 | 9 | 0 |
 | Part III: Pandas | 6 | 6 | 0 |
-| Part IV: Visualization | 10 | 0 | 10 |
+| Part IV: Visualization | 10 | 1 | 9 |
 <!-- | Part V: Machine Learning | 14 | 0 | 14 | -->
-| **Total** | **30** | **20** | **10** |
+| **Total** | **30** | **21** | **9** |
 
 ---
 
@@ -145,7 +145,7 @@ Remaining: 11
 ---
 
 **Last Updated**: [July 14 2026]
-**Status**: In Progress — 66% Complete
+**Status**: In Progress — 70% Complete
 
 ---
 
