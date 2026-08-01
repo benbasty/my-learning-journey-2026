@@ -59,10 +59,10 @@ Here's a professional README.md you can use to track your progress through the *
 | Chapter | Topic | Status |
 |---------|-------|--------|
 | Ch 25 | General Tips for Matplotlib | ✅ Completed | |
-| Ch 26 | Simple Line Plots | ⬜ **Priority** |
-| Ch 27 | Simple Scatter Plots | ⬜ **Priority** |
-| Ch 28 | Density and Contour Plots | ⬜ **Priority** |
-| Ch 29 | Customizing Plot Legends | ⬜ **Priority** |
+| Ch 26 | Simple Line Plots | ✅ Completed | |
+| Ch 27 | Simple Scatter Plots | ✅ Completed | |
+| Ch 28 | Density and Contour Plots |✅ Completed | |
+| Ch 29 | Customizing Plot Legends | ✅ Completed | |
 | Ch 30 | Customizing Colorbars | ⬜ **Priority** |
 | Ch 31 | Multiple Subplots | ⬜ **Priority** |
 | Ch 32 | Text and Annotation | ⬜ **Priority** |
@@ -100,9 +100,9 @@ Here's a professional README.md you can use to track your progress through the *
 | Part I: IPython | 5 | 5 | 0 |
 | Part II: NumPy | 9 | 9 | 0 |
 | Part III: Pandas | 6 | 6 | 0 |
-| Part IV: Visualization | 10 | 1 | 9 |
+| Part IV: Visualization | 10 | 5 | 5 |
 <!-- | Part V: Machine Learning | 14 | 0 | 14 | -->
-| **Total** | **30** | **21** | **9** |
+| **Total** | **30** | **25** | **5** |
 
 ---
 
@@ -144,8 +144,8 @@ Remaining: 11
 
 ---
 
-**Last Updated**: [July 14 2026]
-**Status**: In Progress — 70% Complete
+**Last Updated**: [Aug 1 2026]
+**Status**: In Progress — 83% Complete
 
 ---
 
