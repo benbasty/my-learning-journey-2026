@@ -27,9 +27,29 @@ fig
 # change the transparency (alpha value) of the frame, 
 # or change the padding around the text
 
-# Choosing Elements for the Legend #365 chap 29
-
-# Legend for Size of Pointsv
+# Choosing Elements for the Legend
+y = np.sin(x[:, np.newaxis] + np.pi * np.arange(0, 2, 0.5))
+lines = plt.plot(x, y)
+pll = plt.legend(lines[:2], ['first', 'second'], frameon=True);
 
 # Multiple Legends
 
+# via the standard legend interface, we can only create a single legend for the entire plot.
+# creating a second legend with plt.legend or ax.legend will simply override the first one.
+# a better solution is to use Artist (the base class Matplotlib uses for visual attributes)
+# then using the lower-level ax.add_artist method to manually add the second artist to the plot
+
+fig, ax = plt.subplots()
+lines = []
+styles = ['-', '--', '-.', ':']
+x = np.linspace(0, 10, 1000)
+for i in range(4):
+    lines += ax.plot(x, np.sin(x - i * np.pi / 2), 
+                     styles[i], color='black')
+ax.axis('equal')
+# Specify the lines and labels of the first legend
+ax.legend(lines[:2], ['line A', 'line B'], loc='upper right')
+# Create the second legend and add the artist manually
+from matplotlib.legend import Legend
+leg = Legend(ax, lines[2:], ['line C', 'line D'], loc='lower right')
+ax.add_artist(leg);
