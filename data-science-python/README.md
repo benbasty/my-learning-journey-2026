@@ -63,8 +63,8 @@ Here's a professional README.md you can use to track your progress through the *
 | Ch 27 | Simple Scatter Plots | ✅ Completed | |
 | Ch 28 | Density and Contour Plots |✅ Completed | |
 | Ch 29 | Customizing Plot Legends | ✅ Completed | |
-| Ch 30 | Customizing Colorbars | ⬜ **Priority** |
-| Ch 31 | Multiple Subplots | ⬜ **Priority** |
+| Ch 30 | Customizing Colorbars | ✅ Completed | |
+| Ch 31 | Multiple Subplots | ✅ Completed | |
 | Ch 32 | Text and Annotation | ⬜ **Priority** |
 | Ch 33 | Customizing Ticks | ⬜ **Priority** |
 | Ch 34 | Customizing Matplotlib: Configurations and Stylesheets | ⬜ **Priority** |
@@ -100,9 +100,9 @@ Here's a professional README.md you can use to track your progress through the *
 | Part I: IPython | 5 | 5 | 0 |
 | Part II: NumPy | 9 | 9 | 0 |
 | Part III: Pandas | 6 | 6 | 0 |
-| Part IV: Visualization | 10 | 5 | 5 |
+| Part IV: Visualization | 10 | 7 | 3 |
 <!-- | Part V: Machine Learning | 14 | 0 | 14 | -->
-| **Total** | **30** | **25** | **5** |
+| **Total** | **30** | **27** | **3** |
 
 ---
 
@@ -130,9 +130,9 @@ Here's a professional README.md you can use to track your progress through the *
 
 ---
 Chapters: Pt I: IPython Ch 1-5, Pt II: NumPy Ch 6-14, Pt III: Pandas (Core) Ch 15-21, Pt IV: Visualization Ch 25-36
-All Active Chapters for Completion: 33
-Completed Chapters: 19
-Remaining: 11
+All Active Chapters for Completion: 30
+Completed Chapters: 27
+Remaining: 3
 ---
 
 ## 🚀 Next Steps
@@ -145,7 +145,7 @@ Remaining: 11
 ---
 
 **Last Updated**: [Aug 1 2026]
-**Status**: In Progress — 83% Complete
+**Status**: In Progress — 90% Complete
 
 ---
 
@@ -155,3 +155,5 @@ This document:
 - ✅ Highlights priority chapters for my AI focus
 - ✅ Shows that I intentionally skipped ML chapters (valid for your path)
 - ✅ Provides a professional record for your GitHub portfolio
+
+Check this link: https://jakevdp.github.io/PythonDataScienceHandbook/ for online reference for practice content
