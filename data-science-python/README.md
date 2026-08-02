@@ -65,7 +65,7 @@ Here's a professional README.md you can use to track your progress through the *
 | Ch 29 | Customizing Plot Legends | ✅ Completed | |
 | Ch 30 | Customizing Colorbars | ✅ Completed | |
 | Ch 31 | Multiple Subplots | ✅ Completed | |
-| Ch 32 | Text and Annotation | ⬜ **Priority** |
+| Ch 32 | Text and Annotation | ✅ Completed | |
 | Ch 33 | Customizing Ticks | ⬜ **Priority** |
 | Ch 34 | Customizing Matplotlib: Configurations and Stylesheets | ⬜ **Priority** |
 | Ch 35 | Three-Dimensional Plotting in Matplotlib | ⬜ **Optional** |
@@ -100,9 +100,9 @@ Here's a professional README.md you can use to track your progress through the *
 | Part I: IPython | 5 | 5 | 0 |
 | Part II: NumPy | 9 | 9 | 0 |
 | Part III: Pandas | 6 | 6 | 0 |
-| Part IV: Visualization | 10 | 7 | 3 |
+| Part IV: Visualization | 10 | 8 | 2 |
 <!-- | Part V: Machine Learning | 14 | 0 | 14 | -->
-| **Total** | **30** | **27** | **3** |
+| **Total** | **30** | **28** | **2** |
 
 ---
 
@@ -131,8 +131,8 @@ Here's a professional README.md you can use to track your progress through the *
 ---
 Chapters: Pt I: IPython Ch 1-5, Pt II: NumPy Ch 6-14, Pt III: Pandas (Core) Ch 15-21, Pt IV: Visualization Ch 25-36
 All Active Chapters for Completion: 30
-Completed Chapters: 27
-Remaining: 3
+Completed Chapters: 28
+Remaining: 2
 ---
 
 ## 🚀 Next Steps
@@ -145,7 +145,7 @@ Remaining: 3
 ---
 
 **Last Updated**: [Aug 1 2026]
-**Status**: In Progress — 90% Complete
+**Status**: In Progress — 93% Complete
 
 ---
 
