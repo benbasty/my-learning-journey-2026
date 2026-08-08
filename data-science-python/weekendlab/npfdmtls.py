@@ -77,5 +77,3 @@ assert site_a.shape == site_b.shape == site_c.shape == (3, 1, 4)
     ## np.column_stack(): Takes two 1D arrays and stacks them as columns to make a 2D array.
 features = np.column_stack([readings.mean(1), readings.max(1)])
 assert features.shape == (3, 2)
-
-# PRACTICE TIME
