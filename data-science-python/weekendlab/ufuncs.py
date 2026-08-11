@@ -29,7 +29,12 @@ temp_sq_rt = np.sqrt(temperatures)
 temp-mltp = np.multiply(temperatures, temps2)
 
 # broadcastings and methods
-
+# np.add(temperatures, 10)
+    # => NumPy automatically stretches that single 10 across the whole array in memory.
+    # => this is called broadcasting
+# u-funcs have built-in super moves
+    # => np.add.accumulate([1,2,3]) gives you cumulative sums ([1, 3, 6])
+    # => np.add.reduce([1,2,3]) gives you the total sum (6)
 
 
 
