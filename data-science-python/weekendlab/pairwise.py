@@ -4,7 +4,6 @@
 # sanity check
 
 import numpy as np
-rng = np.random.seed(42)
 points = np.random.randn(5,2)
 
 diffs = points[:, None, :] - points[None, :, :]
