@@ -108,3 +108,28 @@ print(tokenizer.encode(text))
 
 print(tokenizer.decode(tokenizer.encode(text)))
 
+# byte pair encoding bpe
+# to make it easier for us, we will use an existing python source library called tiktoken
+# tiktoken make it easier to encode, decode, get the token ids ...
+
+from importlib.metadata import version
+import tiktoken
+print("tiktoken version", version("tiktoken"))
+
+# lets instantiate BPE tokenizer from tiktoken
+tokenizer = tiktoken.get_encoding("gpt2")
+# similar to simpletokenizer2, lets encode text with tiktoken and print the token ids
+text = (
+    "Hello, do you like tea? <|endoftext|> In the sunlit terraces"
+     "of someunknownPlace."
+)
+integers = tokenizer.encode(text, allowed_special={"<|endoftext|>"})
+print(integers)
+# let's also convert the token ids bback into text
+strings = tokenizer.decode(integers)
+print(strings)
+
+# data sampling with a sliding window
+
+
+
