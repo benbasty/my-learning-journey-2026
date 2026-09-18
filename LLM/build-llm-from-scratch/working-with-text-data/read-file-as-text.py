@@ -130,6 +130,34 @@ strings = tokenizer.decode(integers)
 print(strings)
 
 # data sampling with a sliding window
+with open("the-verdict.txt", "r", encoding="utf-8") as f:
+    raw_text = f.read()
+
+enc_text = tokenizer.encode(raw_text)
+print(len(enc_text))
+enc_sample = enc_text[50:]
+#create input-target pairs that will be used for llm training
+context_size = 4
+x = enc_sample[:context_size]
+y = enc_sample[1:context_size+1]
+print(f"x: {x}")
+print(f"y:      {y}")
+#create next words prediction tasks
+for i in range(1, context_size+1):
+    context = enc_sample[:i]
+    desired = enc_sample[i]
+    print(context, "---->", desired)
+#converting the previous code into text
+for i in range(1, context_size+1):
+    context = enc_sample[:i]
+    desired = enc_sample[i]
+    print(tokenizer.decode(context), "---->", tokenizer.decode([desired]))
+
+# implement a data loader that itterates over the input dataset and returns the inputs and targets as pytorch tensors
+# these tensors are multidimensional arrays.
+# and there's two tensors: an imput tensor containing the text that LLM sees and a target tensor that include the target for the llm to predict
+
+# pytorch will be used for efficient data loader implementation
 
 
 
