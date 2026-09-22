@@ -74,6 +74,83 @@ stride = 1 # stride helps the window to move one token at a time
 
 # 7. Create our PyTorch Dataset
 
+class GPTDataset(Dataset):
+    def __init__(self, text, tokenizer, max_length, stride):
+        self.inputs = []
+        self.targets = []
+
+        token_ids = tokenizer.encode(text)
+
+        for start in range(
+            0,
+            len(token_ids) - max_length,
+            stride
+        ):
+            input_chunk = token_ids[
+                start : start + max_length
+            ]
+
+            target_chunk = token_ids[
+                start + 1 : start + max_length + 1
+            ]
+
+            self.inputs.append(
+                torch.tensor(input_chunk, dtype=torch.long)
+            )
+
+            self.targets.append(
+                torch.tensor(target_chunk, dtype=torch.long)
+            )
+
+    def __len__(self):
+        return len(self.inputs)
+
+    def __getitem__(self, index):
+        return self.inputs[index], self.targets[index]
+
+# the class GPTDataset takes a long stream of tokens and turn it into a list of training examples,
+# where each example is (input_chunk, target_chunk).
+# Everything else about the class exists to make PyTorch's DataLoader able to work with those examples.
+
+# Dataset is a PyTorch base class.
+# PyTorch then expects us to implement __len__(how many items do we have), __getitem__(index) (get the item at this index)
+# Once those two methods exist, a DataLoader can wrap your dataset and do all the heavy lifting (batching, shuffling, parallel loading) automatically
+
+# __init__ is the setup that runs when you create the object
+# The loop that builds every example: for start in range(0, len(token_ids) - max_length, stride):
+# The two slices — this is the heart of the class
+    # input_chunk = token_ids[start : start + max_length] | input_chunk starts at start
+    # target_chunk = token_ids[start + 1 : start + max_length + 1] | target_chunk starts at start + 1
+# Each input_chunk and target_chunk is currently a plain Python list of ints.
+# They are converted into a PyTorch tensor.
+# because PyTorch models operate on tensors, not Python lists.
+# __len__ returns the total number of training examples the dataset holds — which equals the number of windows the loop produced.
+# The DataLoader needs to know how many items exist so it can decide how many batches to create per epoch, sample indices for shuffling,
+    # Know when an epoch is finished. The DataLoader needs to know how many items exist so it can:
+    # Decide how many batches to create per epoch.
+    # Sample indices for shuffling.
+    # Know when an epoch is finished.
+# __getitem__ gives the example at index i
+# the Dataloader gathers a batch of examples by repeatedly calling __getitem__ with different indices.
+    # This is why your class doesn't need to know anything about batching — that's the DataLoader's job.
+# summary
+    # class GPTDataset(Dataset) tells PyTorch this is a dataset it can use.
+    # __init__ does all the work once: tokenize, slide the window, store tensors.
+    # two slices : extract the input (starting at start) and the target (starting at start + 1), which is the one-token shift.
+    # torch.tensor(..., dtype=torch.long) converts Python ints to the integer tensor type PyTorch embeddings and loss functions expect.
+    # __len__ — tells Python (and the DataLoader) how many examples exist.
+    # __getitem__ — returns one (input, target) pair when indexed with dataset[i].
+
+# Dataset vs DataLoader
+    # Dataset represent inndividual training samples
+    # DataLoader handles things like batching, shuffling, iteration, data loading
+    # we have 8 Dataset examples at once for example, Dataset gives inndividual samples, Dataloader gives batches of samples
+
+# 8. Create the dataLoader
+
+
+
+
 
 
 
