@@ -108,6 +108,13 @@ class GPTDataset(Dataset):
     def __getitem__(self, index):
         return self.inputs[index], self.targets[index]
 
+dataset = GPTDataset(
+    raw_text,
+    tokenizer,
+    max_length=4,
+    stride=4
+)
+
 # the class GPTDataset takes a long stream of tokens and turn it into a list of training examples,
 # where each example is (input_chunk, target_chunk).
 # Everything else about the class exists to make PyTorch's DataLoader able to work with those examples.
@@ -147,6 +154,27 @@ class GPTDataset(Dataset):
     # we have 8 Dataset examples at once for example, Dataset gives inndividual samples, Dataloader gives batches of samples
 
 # 8. Create the dataLoader
+dataloader = DataLoader(
+    dataset,
+    batch_size=2,
+    shuffle=False,
+    drop_last=True
+)
+batch = next(iter(dataloader))
+x, y = batch
+print(x)
+print(y)
+
+# A batch is a small group of training examples processed together in one step.
+# DataLoader is a PyTorch utility that wraps your GPTDataset (or any Dataset)
+# and handles batching, shuffling, and iteration for you.
+# DataLoader uses these functions wrote in dataset(__len__ and __getitem__) to fetch examples and stack them into batches.
+# DataLoader
+   # asks dataset for example #0 → (x0, y0)
+   # asks dataset for example #1 → (x1, y1)
+   # stacks them into a batch
+   # hands the batch to you
+
 
 
 
